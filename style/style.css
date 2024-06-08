@@ -406,6 +406,9 @@
         width: auto; /* El botón ocupa el 100% del ancho */
         /*   font-size: 1.2rem;       Ajusta el tamaño de la fuente para pantallas pequeñas */
         /* padding: 10px;              Ajusta el padding para pantallas pequeñas */
+        width: auto; /* El botón ocupa el ancho necesario */
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+        padding: 8px 16px; /* Padding más pequeño para el botón */
     }
     .banner h1 {
         width: 100%; /* El botón ocupa el 100% del ancho */
@@ -429,7 +432,6 @@
    .boton{
     width: auto;
     padding: 5px 5px;
-    margin-bottom: 20px;
    }
 }
 @media (min-width: 768px) {
