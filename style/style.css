@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.ver-carrito {
+    cursor: pointer;
+}
+.banner{
+    background-image: url('../img/imagen-fondo.jpg');
+    position: relative; /* Establece la posición relativa para que el pseudo-elemento se pueda posicionar correctamente */
+
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+}
+.banner::before {
+    content: ""; /* Agrega un contenido al pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho y alto para cubrir todo el contenedor */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro semitransparente */
+    z-index: 1; /* Coloca el pseudo-elemento encima de la imagen de fondo */
+}
+.banner-container{
+    text-align: center;
+    padding: 15% 0;
+
+}
+.banner h1{
+    margin: 0;
+    color: white; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+}
+.banner p {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    color: white; 
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+/* cards-------------------*/
+.shop-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.card{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.card .price{
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #55ec14;
+    width: 20%;
+    text-align: center;
+
+}
+.card .nombre-producto{
+    margin-left: 10px;
+}
+.card .parrafo{
+    margin-left: 10px;
+}
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    height: 10%;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.card button:hover{
+    opacity: 0.7;
+}
+
+/* estrellas -----------*/
+.estrellas {
+    font-size: 24px; 
+    padding-left: 10px;
+}
+
+.crear-span {
+    color:black ;
+    font-weight: bold;
+    background-color: #FFD700;
+    cursor: pointer;
+    
+}
+.estrellas-y-vendidas {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.unidad-vendida {
+    margin-left: 20px; 
+    padding-left: 20px;
+}
+
+.unidad-vendida{
+    padding-bottom: 0 ;
+    margin: 0;
+}
+
+/* modal ------------------------------*/
+.modal-container {
+    width: 60%;
+    margin: 0 20%;
+    max-height: 88vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro semitransparente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+}
+.modal-container::before {
+    content: ""; /* Agrega un contenido al pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho y alto para cubrir todo el contenedor */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro semitransparente */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.modal-close {
+    padding: 10px 10px;
+    margin: 0 10px;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.modal-container > .carrito-contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+    padding: 15px 15px;
+}
+
+.modal-container > .carrito-contenido > img {
+    height: 120px;
+    width: 220px;
+    padding: 0 10px;
+}
+
+.carrito-contenido > .contenedor-carrito{
+    display: block;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.carrito-contenido > .contenedor-carrito > .carrito-titulo{
+    color: rgb(26, 137, 240);
+}
+.carrito-contenido > .contenedor-carrito > .carrito-parrafo{
+    font-size: 1.2rem ;
+}
+.carrito-contenido > .contenedor-carrito > .carrito-precio{
+    font-size: 1.4rem;
+    color: rgb(251, 247, 2);
+    font-weight: bold;
+    width: 25%;
+}
+ .precio-eliminar > .sumar {
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.precio-eliminar > .restar {
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+ .boton{
+    background-color: orange;
+    padding: 5px 10px;
+    margin: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    max-width: 100%; /* Asegura que el botón no exceda el ancho del contenedor */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto desbordado */
+    text-overflow: ellipsis; /* Añade "..." al final del texto desbordado */
+}
+.boton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* pie de pagina----------------------------------*/
+.pie-pagina{
+    height: 80vh;
+    background-image: url('../img/imagen-fondo-2.jpg');
+    position: relative; /* Establece la posición relativa para que el pseudo-elemento se pueda posicionar correctamente */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.pie-pagina::before {
+    content: ""; /* Agrega un contenido al pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho y alto para cubrir todo el contenedor */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro semitransparente */
+    z-index: 1; /* Coloca el pseudo-elemento encima de la imagen de fondo */
+}
+.pie-contenedor {
+    display: grid;
+    gap: 10px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    font-size: 2rem;
+}
+.pie-pagina-link{
+    color: white;
+    text-decoration: none;
+    line-height: 1.5px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    
+}
+.pie-pagina-link:hover{
+    cursor: pointer;
+    color: rgb(209, 208, 208);
+    text-decoration:underline;
+
+}
+/* iconos -----------------------------*/
+.iconos{
+    background-color:#eeca00;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    color: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5));
+    
+    
+}
+.iconos .bi {
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconos .bi:hover {
+    color: transparent;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* copy---------------*/
+.pie-pagina > span {
+    color:rgb(96, 95, 95);
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 30px;
+}
+.pie-pagina > span:hover {
+    background: linear-gradient(to bottom, white, rgb(11, 11, 11));
+    -webkit-background-clip: text;
+    background-clip: text;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* eliminar carrito ----------------*/
+.precio-eliminar {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:10px ;
+    box-shadow: 1px 1px 4px rgb(241, 241, 241); /* Ajusta los valores según lo necesites */
+   
+}
+
+.precio-eliminar > .carrito-precio {
+    font-size: 1.4rem;
+    color: rgb(251, 247, 2);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.delete-product {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.precio-eliminar > .carrito-cantidad{
+    font-size: 1.4rem;
+}
+.precio-eliminar > .carrito-total{
+    font-size: 1.4rem;
+    color: rgb(251, 247, 2);
+}
+/* estilos para la cantidad en el carrito */
+.cart-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 4px;
+    position: absolute;
+    top: -8px; /* Ajusta según sea necesario */
+    right: -6px; /* Ajusta según sea necesario */
+    display: none;
+}
+
+
+/* ---Media queries para pantallas medianas ---------- */
+@media screen and (max-width: 992px) {
+    .modal-container > .carrito-contenido {
+        flex-direction: column; /* Cambia la dirección de los elementos a una columna */
+        align-items: flex-start; /* Alinia los elementos a la izquierda */
+    }
+
+    .modal-container > .carrito-contenido > img {
+        order: -1; /* Mueve la imagen arriba */
+        margin-bottom: 10px; /* Agrega un espacio entre la imagen y el título */
+    }
+}
+
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+    .modal-container > .carrito-contenido > img {
+        width: 100%; /* Hace que la imagen ocupe todo el ancho */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px; /* Aumenta el espacio entre la imagen y el título */
+    }
+
+    .carrito-contenido > .contenedor-carrito > .carrito-precio >  {
+        max-width: none; /* Elimina el límite máximo de ancho del precio */
+    }
+    .card button {
+        width: 100%; /* El botón ocupa el 100% del ancho */
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    }
+    .banner h1 {
+        width: 100%; /* El botón ocupa el 100% del ancho */
+        font-size: 1.6rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        padding: 10px;
+    }
+    .card .price {
+        width: 50%;
+        font-size: 1.4rem;
+    }
+   .pie-pagina-link{
+    text-align: start;
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 1.4rem;
+   }
+   .precio-eliminar {
+    display: block;
+   }
+}
+@media (min-width: 768px) {
+    .pie-contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .precio-eliminar {
+        display: block;
+      }
+}

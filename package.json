@@ -1,0 +1,14 @@
+{
+  "name": "tienda-online",
+  "version": "1.0.0",
+  "description": "Proyecto de tienda online",
+  "main": "js/productos.js",
+  "scripts": {
+    "start": "node js/productos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
