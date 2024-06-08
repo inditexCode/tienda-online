@@ -92,8 +92,8 @@
     background-color: black;
     text-align: center;
     cursor: pointer;
-    width: 30%;
-    height: 10%;
+    width: 150px;
+    height: 50px;
     font-size: 1rem;
     margin-left: 10px;
 }
