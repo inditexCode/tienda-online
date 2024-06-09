@@ -402,6 +402,15 @@
         max-width: none; /* Elimina el límite máximo de ancho del precio */
        
     }
+    /* Media query para dispositivos móviles */
+    .modal-container {
+        width: 90%; /* Por ejemplo, puedes reducir el ancho del modal al 90% */
+        margin: 0 auto; /* Centra el modal horizontalmente */
+        top: 5%; /* Ajusta la posición vertical del modal */
+        max-height: 80vh; /* Limita la altura máxima del modal */
+    }
+
+
     .card button {
         width: auto; /* El botón ocupa el 100% del ancho */
         /*   font-size: 1.2rem;       Ajusta el tamaño de la fuente para pantallas pequeñas */
